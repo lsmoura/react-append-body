@@ -1,0 +1,28 @@
+{
+  "name": "append-body",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development webpack -w",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:production": "cross-env NODE_ENV=production webpack -p"
+  },
+  "author": "Sergio Moura <sergio@moura.ca>",
+  "license": "MIT",
+  "peerDependency": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "uuid": "^3.1.0",
+    "webpack": "^3.1.0"
+  }
+}

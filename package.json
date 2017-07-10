@@ -1,5 +1,5 @@
 {
-  "name": "append-body",
+  "name": "react-append-body",
   "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {

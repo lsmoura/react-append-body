@@ -7,6 +7,10 @@
     "build:dev": "cross-env NODE_ENV=development webpack",
     "build:production": "cross-env NODE_ENV=production webpack -p"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsmoura/react-append-body.git"
+  },
   "author": "Sergio Moura <sergio@moura.ca>",
   "license": "MIT",
   "peerDependency": {

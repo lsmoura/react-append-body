@@ -1,5 +1,5 @@
-import React, { createElement } from 'react';
-import ReactDOM, {
+import React, { createElement, cloneElement } from 'react';
+import {
   render,
   unmountComponentAtNode,
 } from 'react-dom';
@@ -53,10 +53,18 @@ function appendBody(WrappedComponent) {
       super(props);
 
       this.appendedId = uuid();
+      this.element = null;
+      this.key = `append-body-${this.appendedId}`;
+    }
+
+    componentWillReceiveProps(nextProps) {
+      this.element = cloneElement(this.element, { ...nextProps, key: this.key });
+      addElement(this.appendedId, this.element);
     }
 
     componentDidMount() {
-      addElement(this.appendedId, createElement(WrappedComponent, Object.assign({}, this.props, { key: `append-body-${this.appendedId}` })));
+      this.element = createElement(WrappedComponent, Object.assign({}, this.props, { key: this.key }));
+      addElement(this.appendedId, this.element);
     }
 
     componentWillUnmount() {
